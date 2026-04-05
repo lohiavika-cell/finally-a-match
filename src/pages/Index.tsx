@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
 const MetaStrip = () => {
   const items = [
     "♥ Match on: shared avoidance",
@@ -20,9 +23,13 @@ const MetaStrip = () => {
 
 const TopBar = () => (
   <div className="w-full border-b border-border flex items-center justify-between px-6 h-[34px]">
-    <span className="text-foreground text-[14px] font-pixel">Finally</span>
+    <Link to="/" className="text-foreground text-[14px] font-pixel hover:opacity-80">
+      Finally
+    </Link>
     <span className="text-foreground text-[12px] font-pixel hidden md:block">Procrastination-positive dating • 5 ranked things</span>
-    <span className="text-foreground text-[14px] font-pixel cursor-pointer hover:opacity-70">Jump in</span>
+    <Link to="/auth" className="text-foreground text-[14px] font-pixel hover:opacity-70">
+      Jump in
+    </Link>
   </div>
 );
 
@@ -46,9 +53,9 @@ const Hero = () => (
         other on, vent, or actually do the thing<br />
         together.
       </p>
-      <button className="bg-primary text-primary-foreground font-pixel text-[16px] px-8 py-3 rounded-full border border-border hover:opacity-90 transition-opacity mb-4">
-        Start your list
-      </button>
+      <Button asChild className="bg-primary text-primary-foreground font-pixel text-[16px] px-8 py-6 rounded-full border border-border hover:opacity-90 transition-opacity mb-4 h-auto">
+        <Link to="/auth?mode=signup">Start your list</Link>
+      </Button>
       <span className="text-foreground text-[11px] font-mono-space opacity-40">
         No scrolling guilt, no big ask.
       </span>
@@ -175,7 +182,7 @@ const Footer = () => (
       <strong>Finally</strong> — match on what you're not doing yet.
     </p>
     <span className="text-[11px] font-mono-space text-foreground opacity-40">
-      Concept homepage • no data stored • no backend
+      Sign in to save your list — Supabase auth & database
     </span>
   </div>
 );

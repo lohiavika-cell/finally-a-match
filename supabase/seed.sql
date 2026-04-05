@@ -1,0 +1,1 @@
+-- Optional dev seed data. Migrations run before this file on `supabase db reset`.

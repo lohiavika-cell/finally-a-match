@@ -10,7 +10,15 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "supabase:start": "npx supabase start",
+    "supabase:stop": "npx supabase stop",
+    "supabase:status": "npx supabase status",
+    "supabase:reset": "npx supabase db reset",
+    "supabase:login": "npx supabase login",
+    "supabase:link": "npx supabase link --project-ref xmwhazzibndfywkwxnni",
+    "supabase:push": "npx supabase db push",
+    "supabase:migration:new": "npx supabase migration new"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -41,6 +49,7 @@
     "@radix-ui/react-toggle": "^1.1.9",
     "@radix-ui/react-toggle-group": "^1.1.10",
     "@radix-ui/react-tooltip": "^1.2.7",
+    "@supabase/supabase-js": "^2.101.1",
     "@tanstack/react-query": "^5.83.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
