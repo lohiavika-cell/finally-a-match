@@ -1,5 +1,3 @@
-import tomatoImg from "@/assets/tomato-hero.png";
-
 const MetaStrip = () => {
   const items = [
     "♥ Match on: shared avoidance",
@@ -30,13 +28,13 @@ const TopBar = () => (
 
 const Hero = () => (
   <section className="relative w-full flex flex-col items-center justify-center min-h-[600px] md:min-h-[700px] py-16 overflow-hidden">
-    <img
-      src={tomatoImg}
-      alt="A giant glossy tomato"
-      width={1024}
-      height={1024}
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[550px] h-auto pointer-events-none select-none z-0 opacity-95"
-    />
+    <div
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-0 opacity-95 leading-none"
+      role="img"
+      aria-label="Love letter"
+    >
+      <span className="block text-[260px] md:text-[360px] drop-shadow-[0_8px_24px_rgba(142,22,6,0.15)]">💌</span>
+    </div>
     <div className="relative z-10 flex flex-col items-center text-center px-4">
       <h1 className="text-[50px] md:text-[80px] leading-[0.95] font-bold font-pixel text-primary-foreground drop-shadow-[0_2px_8px_rgba(142,22,6,0.3)] mb-8">
         Finally,<br />someone<br />who gets<br />your<br />to-do list
